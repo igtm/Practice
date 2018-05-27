@@ -20,8 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         UIApplication.shared.statusBarStyle = .default
 
-        window?.backgroundColor = UIColor.red
-        window?.rootViewController = ViewController()
+        window?.backgroundColor = UIColor.white
+        let navigationController = UINavigationController(rootViewController: ViewController())
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         return true
     }
