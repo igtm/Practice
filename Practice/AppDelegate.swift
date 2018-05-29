@@ -21,8 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.shared.statusBarStyle = .default
 
         window?.backgroundColor = UIColor.white
-        let navigationController = UINavigationController(rootViewController: ViewController())
-        window?.rootViewController = navigationController
+        // let navigationController = UINavigationController(rootViewController: ViewController())
+        // navigationController.setNavigationBarHidden(true, animated: false)
+        window?.rootViewController = MainTabBarViewController()
         window?.makeKeyAndVisible()
         return true
     }

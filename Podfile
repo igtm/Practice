@@ -10,5 +10,6 @@ target 'Practice' do
   pod 'MaterialComponents/AppBar'
   pod 'MaterialComponents/NavigationBar'
   pod 'MaterialComponents/FlexibleHeader'
+  pod 'MaterialComponents/BottomNavigation'
   pod 'SnapKit', '~> 4.0.0'
 end

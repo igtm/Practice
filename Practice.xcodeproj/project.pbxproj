@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A14648020BD916C002C9158 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A14647F20BD916C002C9158 /* MainTabBarViewController.swift */; };
 		4AFF8F7E20B70DC700456B23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF8F7D20B70DC700456B23 /* AppDelegate.swift */; };
 		4AFF8F8020B70DC700456B23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF8F7F20B70DC700456B23 /* ViewController.swift */; };
 		4AFF8F8620B70DC700456B23 /* Practice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF8F8420B70DC700456B23 /* Practice.xcdatamodeld */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		1E16663A9EFB277AA993B395 /* Pods_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A14647F20BD916C002C9158 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		4AFF8F7A20B70DC700456B23 /* Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AFF8F7D20B70DC700456B23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AFF8F7F20B70DC700456B23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				4AFF8F8C20B70DC800456B23 /* Info.plist */,
 				4AFF8F8420B70DC700456B23 /* Practice.xcdatamodeld */,
 				4AFF8FB320BAE0AD00456B23 /* SecondViewController.swift */,
+				3A14647F20BD916C002C9158 /* MainTabBarViewController.swift */,
 			);
 			path = Practice;
 			sourceTree = "<group>";
@@ -103,6 +106,7 @@
 				4AFF8F7720B70DC700456B23 /* Frameworks */,
 				4AFF8F7820B70DC700456B23 /* Resources */,
 				AEBEA0D10F68B0E83470057D /* [CP] Embed Pods Frameworks */,
+				435A42F8A9929A7FDF82000C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -159,6 +163,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		435A42F8A9929A7FDF82000C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Practice/Pods-Practice-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8A46312E5DE9150DC4980EA8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -208,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A14648020BD916C002C9158 /* MainTabBarViewController.swift in Sources */,
 				4AFF8FB420BAE0AD00456B23 /* SecondViewController.swift in Sources */,
 				4AFF8F8020B70DC700456B23 /* ViewController.swift in Sources */,
 				4AFF8F7E20B70DC700456B23 /* AppDelegate.swift in Sources */,

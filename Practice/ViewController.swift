@@ -11,7 +11,7 @@ import MaterialComponents.MaterialButtons
 import SnapKit
 
 class ViewController: UIViewController {
-    
+
     // Elements
     let fab: MDCButton = {
         let btn = MDCFloatingButton()
@@ -66,6 +66,7 @@ class ViewController: UIViewController {
     @objc func buttonTapped(sender: AnyObject) {
         print("pressed!")
         self.fab.setTitle("Pressed!", for: UIControlState.normal)
+        self.navigationController?.pushViewController(SecondViewController(), animated: true)
     }
 
     @objc func rightNavButtonTapped(sender: AnyObject) {

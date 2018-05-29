@@ -13,6 +13,8 @@
 #import "MaterialAppBar.h"
 #import "MDCAppBar.h"
 #import "MDCAppBarContainerViewController.h"
+#import "MaterialBottomNavigation.h"
+#import "MDCBottomNavigationBar.h"
 #import "MaterialButtonBar.h"
 #import "MDCButtonBar.h"
 #import "MDCButtonBarButton.h"

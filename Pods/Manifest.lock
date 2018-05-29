@@ -10,6 +10,13 @@ PODS:
     - MaterialComponents/ShadowLayer
     - MaterialComponents/Typography
     - MDFInternationalization
+  - MaterialComponents/BottomNavigation (55.2.0):
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Typography
+    - MDFInternationalization
   - MaterialComponents/ButtonBar (55.2.0):
     - MaterialComponents/Buttons
     - MDFInternationalization
@@ -56,17 +63,11 @@ PODS:
 
 DEPENDENCIES:
   - MaterialComponents/AppBar
+  - MaterialComponents/BottomNavigation
   - MaterialComponents/Buttons
   - MaterialComponents/FlexibleHeader
   - MaterialComponents/NavigationBar
   - SnapKit (~> 4.0.0)
-
-SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - MaterialComponents
-    - MDFInternationalization
-    - MDFTextAccessibility
-    - SnapKit
 
 SPEC CHECKSUMS:
   MaterialComponents: b321a90d9746ac7be2e5da3f8497c5aa15b1f761
@@ -74,6 +75,6 @@ SPEC CHECKSUMS:
   MDFTextAccessibility: 94098925e0853551c5a311ce7c1ecefbe297cdb6
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: 98c7ac3a8a66f57adc0f1adf76ff12bfe4351dd8
+PODFILE CHECKSUM: 6f2319d2428c441b0e967882690d68a6c945ae68
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.4.0
