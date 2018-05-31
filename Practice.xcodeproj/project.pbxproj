@@ -15,6 +15,7 @@
 		4AFF8F8B20B70DC800456B23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AFF8F8920B70DC800456B23 /* LaunchScreen.storyboard */; };
 		4AFF8FB420BAE0AD00456B23 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF8FB320BAE0AD00456B23 /* SecondViewController.swift */; };
 		688BE1AE292D64100FF3E10E /* Pods_Practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E16663A9EFB277AA993B395 /* Pods_Practice.framework */; };
+		A1B6422EDD020F9D337826F3 /* TimetableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B647939E52AC2895FB1FC0 /* TimetableCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		4AFF8F8C20B70DC800456B23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AFF8FB320BAE0AD00456B23 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		81C06461789DF619C1BBACE5 /* Pods-Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Practice.release.xcconfig"; path = "Pods/Target Support Files/Pods-Practice/Pods-Practice.release.xcconfig"; sourceTree = "<group>"; };
+		A1B647939E52AC2895FB1FC0 /* TimetableCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableCollectionViewCell.swift; sourceTree = "<group>"; };
 		C4A84F50DEFDD4DE96D6C020 /* Pods-Practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Practice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Practice/Pods-Practice.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +84,7 @@
 				4AFF8F8420B70DC700456B23 /* Practice.xcdatamodeld */,
 				4AFF8FB320BAE0AD00456B23 /* SecondViewController.swift */,
 				3A14647F20BD916C002C9158 /* MainTabBarViewController.swift */,
+				A1B647939E52AC2895FB1FC0 /* TimetableCollectionViewCell.swift */,
 			);
 			path = Practice;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				4AFF8F8020B70DC700456B23 /* ViewController.swift in Sources */,
 				4AFF8F7E20B70DC700456B23 /* AppDelegate.swift in Sources */,
 				4AFF8F8620B70DC700456B23 /* Practice.xcdatamodeld in Sources */,
+				A1B6422EDD020F9D337826F3 /* TimetableCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

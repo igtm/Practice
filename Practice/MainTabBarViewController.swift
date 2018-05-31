@@ -15,9 +15,10 @@ class MainTabBarViewController: UITabBarController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        let first = ViewController()
-        let second = SecondViewController()
+        let first = UINavigationController(rootViewController: ViewController())
+        let second = UINavigationController(rootViewController: SecondViewController())
+        // first.setNavigationBarHidden(true, animated: false)
+        // second.setNavigationBarHidden(true, animated: false)
 
         first.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.featured, tag: 1)
         second.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.featured, tag: 2)

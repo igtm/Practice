@@ -7,80 +7,78 @@
 //
 
 import UIKit
-import MaterialComponents.MaterialButtons
-import SnapKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
-    // Elements
-    let fab: MDCButton = {
-        let btn = MDCFloatingButton()
-        btn.backgroundColor = UIColor.red
-        btn.setTitle("YEAH!", for: UIControlState.normal)
-        btn.setTitleColor(UIColor.black,  for: UIControlState.normal)
-        btn.addTarget(self,
-                      action: .buttonTapped,
-                      for: .touchUpInside)
-        return btn
-    }()
-    
-    let label: UILabel = {
-        let label = UILabel()
-        label.text = "0"
-        label.textAlignment = .center
-        label.sizeToFit()
-        return label
-    }()
+    var myCollectionView : UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        fab.setElevation(ShadowElevation(12.0), for: .highlighted)
-        view.addSubview(fab)
-        view.addSubview(label)
-        
-        // AutoLayout
-        // @see: https://tech.ryukyu-i.co.jp/2016/12/02/easy-to-use-snapkit/
-        fab.snp
-            .makeConstraints { (make) -> Void in
-            make.width.height.equalTo(50)
-            make.center.equalTo(self.view)
-        }
-        label.snp.makeConstraints{ make -> Void in
-            make.width.height.equalTo(20)
-            make.top.equalTo(fab.snp.top).offset(-50)
-            // make.centerX.equalTo(self.view)
-            make.centerX.equalToSuperview()
-        }
-        
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: .rightNavButtonTapped)
-        
-        print("YEAR!")
+
+        // CollectionViewのレイアウトを生成.
+        let layout = UICollectionViewFlowLayout()
+
+        // Cell一つ一つの大きさ.
+        layout.itemSize = CGSize(width:50, height:50)
+
+        // Cellのマージン.
+        layout.sectionInset = UIEdgeInsetsMake(16, 16, 32, 16)
+
+        // セクション毎のヘッダーサイズ.
+        layout.headerReferenceSize = CGSize(width:100,height:30)
+
+        // CollectionViewを生成.
+        myCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+
+        // Cellに使われるクラスを登録.
+        myCollectionView.register(TimetableCollectionViewCell.self, forCellWithReuseIdentifier: "MyCell")
+
+        myCollectionView.delegate = self
+        myCollectionView.dataSource = self
+        myCollectionView.backgroundColor = .white
+
+        self.view.addSubview(myCollectionView)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @objc func buttonTapped(sender: AnyObject) {
-        print("pressed!")
-        self.fab.setTitle("Pressed!", for: UIControlState.normal)
-        self.navigationController?.pushViewController(SecondViewController(), animated: true)
+
+    /**
+    * Collection View
+    */
+
+    /*
+     Cellが選択された際に呼び出される
+     */
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+        print("Num: \(indexPath.row)")
+        print("Value:\(collectionView)")
+
     }
 
-    @objc func rightNavButtonTapped(sender: AnyObject) {
-        print("pressed!")
-        self.navigationController?.pushViewController(SecondViewController(), animated: true)
+    /*
+     Cellの総数を返す
+     */
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 100
+    }
+
+    /*
+     Cellに値を設定する
+     */
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
+        // 引っ張ってくる
+        let cell : UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCell",
+                for: indexPath as IndexPath)
+
+        // cell.backgroundColor = UIColor.orange
+        return cell
     }
 
 }
 
-// #selectorをtypeプロパティとして持つ
-// @see: https://qiita.com/hachinobu/items/a0e06e87728c96969a1f
-
-private extension Selector {
-    // .buttonTapped
-    static let buttonTapped = #selector(ViewController.buttonTapped(sender:))
-    static let rightNavButtonTapped = #selector(ViewController.rightNavButtonTapped(sender:))
-}
